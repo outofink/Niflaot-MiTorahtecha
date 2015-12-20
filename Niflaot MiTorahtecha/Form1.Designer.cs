@@ -59,6 +59,7 @@
             this.lateBox.TabIndex = 1;
             this.lateBox.Text = "After Rosh HaShanah";
             this.lateBox.UseVisualStyleBackColor = true;
+            this.lateBox.CheckedChanged += new System.EventHandler(this.lateBox_CheckedChanged);
             // 
             // label1
             // 
@@ -73,7 +74,7 @@
             // 
             this.yearInput.Location = new System.Drawing.Point(50, 20);
             this.yearInput.Maximum = new decimal(new int[] {
-            5888,
+            5845,
             0,
             0,
             0});
@@ -90,6 +91,7 @@
             0,
             0,
             0});
+            this.yearInput.ValueChanged += new System.EventHandler(this.yearInput_ValueChanged);
             // 
             // goButton
             // 

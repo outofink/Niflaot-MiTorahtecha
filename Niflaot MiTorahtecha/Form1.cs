@@ -30,11 +30,11 @@ namespace Niflaot_MiTorahtecha
                 yearInput.Minimum = -3761;
                 yearInput.Value -= 3760;
                 if (lateBox.Checked) { yearInput.Value -= 1; }
-                yearInput.Maximum = 2128;
+                yearInput.Maximum = 2085;
             }
             if (!gregBox.Checked) {
                 lateBox.Enabled = false;
-                yearInput.Maximum = 5888;
+                yearInput.Maximum = 5845;
                 yearInput.Value += 3760;
                 if (lateBox.Checked) { yearInput.Value += 1; }
                 yearInput.Minimum = 0;
@@ -82,6 +82,20 @@ namespace Niflaot_MiTorahtecha
             }
             locationText.Text = book + pasuk.Substring(0, pasuk.IndexOf(','));
             pasukText.Text = pasuk.Substring(pasuk.IndexOf(',')+1);
+        }
+
+
+
+
+        //fixes after rosh hashanah of the last gregorian year
+        private void yearInput_ValueChanged(object sender, EventArgs e)
+        {
+            if (yearInput.Value == yearInput.Maximum) { lateBox.Checked = false; }
+        }
+
+        private void lateBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (yearInput.Value == yearInput.Maximum && lateBox.Checked == true) { lateBox.Checked = false; }
         }
     }
 }
