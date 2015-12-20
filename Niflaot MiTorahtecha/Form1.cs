@@ -51,38 +51,37 @@ namespace Niflaot_MiTorahtecha
                 number += 3760;
                 if (lateBox.Checked) { number += 1; }
             }
-            if (number > 4878)
+            if (number > 4890)
             {
-                number -= 4878;
-                book = "Devarim";
-                pasuk = File.ReadLines("devarim.txt").Skip(number - 1).Take(1).First();
+                number -= 4890;
+                book = "דברים ";
+                pasuk = File.ReadLines("text/devarim.txt").Skip(number - 1).Take(1).First();
             }
-            else if (number > 3589)
+            else if (number > 3602)
             {
-                number -= 3589;
-                book = "Bamidbar";
-                pasuk = File.ReadLines("bamidbar.txt").Skip(number - 1).Take(1).First();
+                number -= 3602;
+                book = "במדבר ";
+                pasuk = File.ReadLines("text/bamidbar.txt").Skip(number - 1).Take(1).First();
             }
-            else if (number > 2730)
+            else if (number > 2743)
             {
-                number -= 2730;
-                book = "Vayikra";
-                pasuk = File.ReadLines("vayikra.txt").Skip(number - 1).Take(1).First();
+                number -= 2743;
+                book = "ויקרא ";
+                pasuk = File.ReadLines("text/vayikra.txt").Skip(number - 1).Take(1).First();
             }
-            else if (number > 1533)
+            else if (number > 1534)
             {
-                number -= 1533;
-                book = "Shemot";
-                pasuk = File.ReadLines("shemot.txt").Skip(number - 1).Take(1).First();
+                number -= 1534;
+                book = "שמות ";
+                pasuk = File.ReadLines("text/shemot.txt").Skip(number - 1).Take(1).First();
             }
             else {
-                book = "Bereshis";
-                pasuk = File.ReadLines("bereshis.txt").Skip(number - 1).Take(1).First();
+                book = "בראשית ";
+                pasuk = File.ReadLines("text/bereshis.txt").Skip(number - 1).Take(1).First();
 
             }
-            locationText.Text = book + pasuk.Substring(0, 10);
-            pasukText.Text = pasuk.Substring(10);
+            locationText.Text = book + pasuk.Substring(0, pasuk.IndexOf(','));
+            pasukText.Text = pasuk.Substring(pasuk.IndexOf(',')+1);
         }
-
     }
 }

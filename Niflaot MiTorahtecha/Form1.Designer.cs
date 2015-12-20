@@ -104,10 +104,12 @@
             // locationText
             // 
             this.locationText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.locationText.Location = new System.Drawing.Point(40, 84);
+            this.locationText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.locationText.Location = new System.Drawing.Point(41, 84);
             this.locationText.Margin = new System.Windows.Forms.Padding(0);
             this.locationText.Name = "locationText";
-            this.locationText.Size = new System.Drawing.Size(300, 45);
+            this.locationText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.locationText.Size = new System.Drawing.Size(300, 29);
             this.locationText.TabIndex = 6;
             this.locationText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -115,9 +117,10 @@
             // 
             this.pasukText.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pasukText.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pasukText.Location = new System.Drawing.Point(40, 129);
+            this.pasukText.Location = new System.Drawing.Point(40, 113);
             this.pasukText.Margin = new System.Windows.Forms.Padding(0);
             this.pasukText.Name = "pasukText";
+            this.pasukText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.pasukText.Size = new System.Drawing.Size(300, 100);
             this.pasukText.TabIndex = 7;
             this.pasukText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 238);
+            this.ClientSize = new System.Drawing.Size(384, 228);
             this.Controls.Add(this.pasukText);
             this.Controls.Add(this.locationText);
             this.Controls.Add(this.goButton);
